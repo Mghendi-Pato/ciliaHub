@@ -25,7 +25,8 @@ const Home = () => {
           spacing={5}
           direction="column"
           justifyContent="space-around"
-          alignItems={{ xs: "center", md: "flex-start" }}>
+          alignItems={{ xs: "center", md: "flex-start" }}
+          sx={{ width: "100%" }}>
           <Stack>
             <Typography variant="h5" sx={{ ...commonTypographyStyles }}>
               Let’s Design, Let’s Develop
@@ -42,8 +43,22 @@ const Home = () => {
               tech ideas, in mobile and web design, and development.
             </Typography>
           </Stack>
-          <Stack>
+          <Stack
+            flexGrow={1}
+            direction="row"
+            justifyContent={{ xs: "center", md: "space-between" }}
+            alignItems="center"
+            sx={{ width: "100%" }}>
             <Button text="Contact Us" />
+
+            <Stack sx={{ display: { xs: "none", md: "flex" } }}>
+              <img
+                src="Home_image.svg"
+                alt="Home svg"
+                title="Home svg"
+                style={{ width: "150px" }}
+              />
+            </Stack>
           </Stack>
         </Stack>
       </Stack>
