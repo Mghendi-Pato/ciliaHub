@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import Button from "../components/CustomButton";
-import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
 
 const About = () => {
   return (
@@ -64,7 +64,7 @@ const About = () => {
           }}>
           <li>
             <Stack direction="row" alignItems="center" spacing={1}>
-              <SentimentSatisfiedAltIcon sx={{ color: "#C6171E" }} />
+              <WhatshotIcon sx={{ color: "#C6171E" }} />
               <Typography>
                 Comprehensive technology solutions tailored to your
                 requirements.
@@ -73,7 +73,7 @@ const About = () => {
           </li>
           <li>
             <Stack direction="row" alignItems="center" spacing={1}>
-              <SentimentSatisfiedAltIcon sx={{ color: "#C6171E" }} />
+              <WhatshotIcon sx={{ color: "#C6171E" }} />
               <Typography>
                 A dedicated team of experienced professionals.
               </Typography>
@@ -81,7 +81,7 @@ const About = () => {
           </li>
           <li>
             <Stack direction="row" alignItems="center" spacing={1}>
-              <SentimentSatisfiedAltIcon sx={{ color: "#C6171E" }} />
+              <WhatshotIcon sx={{ color: "#C6171E" }} />
               <Typography>
                 Adherence to industry best practices and the latest
                 technologies.
@@ -90,7 +90,7 @@ const About = () => {
           </li>
           <li>
             <Stack direction="row" alignItems="center" spacing={1}>
-              <SentimentSatisfiedAltIcon sx={{ color: "#C6171E" }} />
+              <WhatshotIcon sx={{ color: "#C6171E" }} />
               <Typography>
                 Commitment to innovation, creativity, and excellence.
               </Typography>
