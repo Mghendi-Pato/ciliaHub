@@ -31,7 +31,7 @@ const Services = () => {
             direction="column"
             spacing={2}
             alignItems="flex-start"
-            sx={{ width: "200px", border: "solid 2px #C4C4C4", p: 2 }}>
+            sx={{ width: "250px", border: "solid 2px #C4C4C4", p: 2 }}>
             <AdbIcon sx={{ fontSize: 50, color: "#C6171E" }} />
             <Typography>UI/UX Design</Typography>
             <Typography sx={{ color: "#6F6F6F" }}>
@@ -45,7 +45,7 @@ const Services = () => {
             direction="column"
             spacing={2}
             alignItems="flex-start"
-            sx={{ width: "200px", border: "solid 2px #C4C4C4", p: 2 }}>
+            sx={{ width: "250px", border: "solid 2px #C4C4C4", p: 2 }}>
             <AdbIcon sx={{ fontSize: 50, color: "#C6171E" }} />
             <Typography>UI/UX Design</Typography>
             <Typography sx={{ color: "#6F6F6F" }}>
@@ -59,7 +59,7 @@ const Services = () => {
             direction="column"
             spacing={2}
             alignItems="flex-start"
-            sx={{ width: "200px", border: "solid 2px #C4C4C4", p: 2 }}>
+            sx={{ width: "250px", border: "solid 2px #C4C4C4", p: 2 }}>
             <AdbIcon sx={{ fontSize: 50, color: "#C6171E" }} />
             <Typography>UI/UX Design</Typography>
             <Typography sx={{ color: "#6F6F6F" }}>
