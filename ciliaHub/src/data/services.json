@@ -1,0 +1,40 @@
+[
+  {
+    "name": "UI/UX Design",
+    "data": [
+      "Intuitive user interface design",
+      "Wireframing and prototyping",
+      "Responsive and mobile-friendly designs",
+      "Consistent and appealing color schemes",
+      "Seamless navigation and user flows",
+      "Accessibility considerations",
+      "Attention to detail in microinteractions"
+    ]
+  },
+  {
+    "name": "Frontend Development",
+    "data": [
+      "Cross-browser compatibility",
+      "Responsive web development",
+      "Efficient and clean coding",
+      "Single Page Application (SPA) development",
+      "Integration with RESTful APIs",
+      "Browser performance optimization",
+      "Continuous integration and deployment (CI/CD)"
+    ]
+  },
+  {
+    "name": "Backend Development",
+    "data": [
+      "Database design and management (SQL, NoSQL)",
+      "API development and integration",
+      "Authentication and authorization mechanisms",
+      "Server deployment and configuration",
+      "Handling data security and encryption",
+      "Scalability and performance optimization",
+      "Caching strategies for improved speed",
+      "Error handling and logging",
+      "Database migrations and version control"
+    ]
+  }
+]

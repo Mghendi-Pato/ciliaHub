@@ -1,5 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
+import services from "../data/services.json";
+import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 const Services = () => {
   return (
     <>
@@ -26,49 +28,30 @@ const Services = () => {
           direction={{ xs: "column", md: "row" }}
           spacing={2}
           justifyContent="space-between"
-          alignItems="center">
-          <Stack
-            direction="column"
-            spacing={2}
-            alignItems="flex-start"
-            sx={{ width: "250px", border: "solid 2px #C4C4C4", p: 2 }}>
-            <AdbIcon sx={{ fontSize: 50, color: "#C6171E" }} />
-            <Typography>UI/UX Design</Typography>
-            <Typography sx={{ color: "#6F6F6F" }}>
-              Lorem ipsum dolor amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </Typography>
-          </Stack>
-          <Stack
-            direction="column"
-            spacing={2}
-            alignItems="flex-start"
-            sx={{ width: "250px", border: "solid 2px #C4C4C4", p: 2 }}>
-            <AdbIcon sx={{ fontSize: 50, color: "#C6171E" }} />
-            <Typography>UI/UX Design</Typography>
-            <Typography sx={{ color: "#6F6F6F" }}>
-              Lorem ipsum dolor amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </Typography>
-          </Stack>
-          <Stack
-            direction="column"
-            spacing={2}
-            alignItems="flex-start"
-            sx={{ width: "250px", border: "solid 2px #C4C4C4", p: 2 }}>
-            <AdbIcon sx={{ fontSize: 50, color: "#C6171E" }} />
-            <Typography>UI/UX Design</Typography>
-            <Typography sx={{ color: "#6F6F6F" }}>
-              Lorem ipsum dolor amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </Typography>
-          </Stack>
+          alignItems={{ xs: "center", md: "flex-start" }}>
+          {services.map((service, index) => (
+            <Stack
+              key={index}
+              direction="column"
+              spacing={2}
+              alignItems="flex-start"
+              sx={{
+                width: "300px",
+                height: "520px",
+                border: "solid 2px #C4C4C4",
+                p: 2,
+              }}>
+              <AdbIcon sx={{ fontSize: 50, color: "#C6171E" }} />
+              <Typography>{service.name}</Typography>
+              <ul style={{ color: "#6F6F6F", paddingLeft: 20 }}>
+                {service.data.map((item, index) => (
+                  <li key={index} style={{ listStyleType: "disc" }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Stack>
+          ))}
         </Stack>
       </Stack>
     </>
