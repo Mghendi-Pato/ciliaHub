@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { Stack, Typography } from "@mui/material";
 import * as yup from "yup";
 import TextField from "@mui/material/TextField";
 import { useFormik } from "formik";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Button from "../components/CustomButton";
+import emailjs from "@emailjs/browser";
+import Alert from "@mui/material/Alert";
+import Slide from "@mui/material/Slide";
 
 const Contact = () => {
+  const [alert, setAlert] = useState(null);
+
   const validationSchema = yup.object({
     lastName: yup.string().required("Last Name is required"),
     firstName: yup.string().required("First Name is required"),
@@ -25,8 +30,44 @@ const Contact = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log(values);
-      // Your submit logic goes here
+      // Email.js setup
+      const serviceId = "service_aanz72k";
+      const templateId = "template_1gxenke";
+      const publicKey = "BDNfTWBd-AHB-OapL";
+
+      const templateParams = {
+        from_name: `${values.lastName} ${values.firstName}`,
+        from_email: values.email,
+        to_name: "ciliahub",
+        message: values.message,
+      };
+      emailjs
+        .send(serviceId, templateId, templateParams, publicKey)
+        .then((response) => {
+          setAlert({
+            variant: "outlined",
+            severity: "success",
+            message: "Message sent successfully",
+            details: response.message,
+          });
+
+          setTimeout(() => {
+            formik.handleReset();
+            setAlert(null);
+          }, 5000);
+        })
+        .catch((error) => {
+          setAlert({
+            variant: "outlined",
+            severity: "error",
+            message: "Message sending failed",
+            details: error.message,
+          });
+
+          setTimeout(() => {
+            setAlert(null);
+          }, 5000);
+        });
     },
   });
 
@@ -59,6 +100,17 @@ const Contact = () => {
             you within the shortest time possible through the email you provide.
           </Typography>
         </Stack>
+        {alert && (
+          <Slide
+            direction="left"
+            in={Boolean(alert)}
+            mountOnEnter
+            unmountOnExit>
+            <Alert variant={alert.variant} severity={alert.severity}>
+              {alert.message}
+            </Alert>
+          </Slide>
+        )}
         <Stack sx={{ my: 5 }}>
           <form onSubmit={formik.handleSubmit}>
             <Stack spacing={2}>
@@ -139,7 +191,7 @@ const Contact = () => {
                 By sending this message, you consent to ciliaHub sending you
                 emails.
               </Typography>
-              <Button text="Send Message" />
+              <Button text="Send Message" type="submit" />
             </Stack>
           </form>
         </Stack>

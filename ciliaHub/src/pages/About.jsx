@@ -97,6 +97,7 @@ const About = () => {
             </Stack>
           </li>
         </Stack>
+
         <Button text="Get In Touch" />
       </Stack>
     </>

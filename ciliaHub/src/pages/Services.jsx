@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import services from "../data/services.json";
-import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+
 const Services = () => {
   return (
     <>
