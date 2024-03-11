@@ -56,13 +56,15 @@ const Contact = () => {
               width: { xs: "95vw", md: "30vw" },
             }}>
             Get in touch, leave a message and our vibrant team will get back to
-            you within the shortest time possible through the your email.
+            you within the shortest time possible through the email you provide.
           </Typography>
         </Stack>
         <Stack sx={{ my: 5 }}>
           <form onSubmit={formik.handleSubmit}>
             <Stack spacing={2}>
-              <Typography>Last Name:</Typography>
+              <Typography>
+                Last Name <span style={{ color: "#C6171E" }}>*</span>
+              </Typography>
               <TextField
                 variant="outlined"
                 sx={{ backgroundColor: "#fff", borderRadius: "10px" }}
@@ -79,7 +81,9 @@ const Contact = () => {
                 fullWidth
               />
 
-              <Typography>First Name:</Typography>
+              <Typography>
+                First Name <span style={{ color: "#C6171E" }}>*</span>
+              </Typography>
               <TextField
                 variant="outlined"
                 sx={{ backgroundColor: "#fff", borderRadius: "10px" }}
@@ -96,7 +100,9 @@ const Contact = () => {
                 fullWidth
               />
 
-              <Typography>Email:</Typography>
+              <Typography>
+                Email <span style={{ color: "#C6171E" }}>*</span>
+              </Typography>
               <TextField
                 variant="outlined"
                 sx={{ backgroundColor: "#fff", borderRadius: "10px" }}
@@ -111,7 +117,9 @@ const Contact = () => {
                 fullWidth
               />
 
-              <Typography>Message:</Typography>
+              <Typography>
+                Message <span style={{ color: "#C6171E" }}>*</span>
+              </Typography>
               <TextField
                 variant="outlined"
                 sx={{ backgroundColor: "#fff", borderRadius: "10px" }}

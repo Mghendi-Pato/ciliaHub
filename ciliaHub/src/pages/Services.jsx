@@ -36,7 +36,7 @@ const Services = () => {
               spacing={2}
               alignItems="flex-start"
               sx={{
-                width: "300px",
+                width: "310px",
                 height: "520px",
                 border: "solid 2px #C4C4C4",
                 p: 2,

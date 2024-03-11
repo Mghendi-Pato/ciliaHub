@@ -5,7 +5,11 @@ import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt
 const About = () => {
   return (
     <>
-      <Stack direction="column" alignItems="center" spacing={5} sx={{ py: 15 }}>
+      <Stack
+        direction="column"
+        alignItems="center"
+        spacing={5}
+        sx={{ py: 15, mx: 5 }}>
         <Typography
           variant="h4"
           sx={{
@@ -17,6 +21,7 @@ const About = () => {
         </Typography>
         <Typography
           sx={{
+            textAlign: { xs: "center", md: "left" },
             color: "5F5D5F",
             width: { xs: "95vw", md: "50vw" },
           }}>
@@ -29,6 +34,7 @@ const About = () => {
         </Typography>
         <Typography
           sx={{
+            textAlign: { xs: "center", md: "left" },
             color: "5F5D5F",
             width: { xs: "95vw", md: "50vw" },
           }}>

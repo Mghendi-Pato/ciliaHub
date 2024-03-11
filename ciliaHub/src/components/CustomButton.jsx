@@ -25,7 +25,7 @@ const Button1 = (props) => {
         <Typography
           sx={{
             fontWeight: "bold",
-            fontSize: { md: 10, lg: 12 },
+            fontSize: { md: 12, lg: 16 },
             color: "#fff",
           }}>
           {text}
