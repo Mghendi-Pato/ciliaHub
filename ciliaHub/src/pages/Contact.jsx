@@ -80,6 +80,12 @@ const Contact = () => {
           py: 12,
         }}>
         <Stack justifyContent="center" alignItems="center">
+          <img
+            src="contact.svg"
+            alt="Home svg"
+            title="Home svg"
+            style={{ width: "200px" }}
+          />
           <Typography
             variant="h4"
             sx={{

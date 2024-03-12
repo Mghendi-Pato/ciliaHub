@@ -27,6 +27,21 @@ function Footer() {
           </Typography>
           <Typography sx={{ color: "#fff" }}>Designed by ciliaHub. </Typography>
         </Stack>
+        <Stack sx={{ pt: 1 }}>
+          <Typography variant="h6" sx={{ color: "#fff" }}>
+            Attributions
+          </Typography>
+          <a
+            style={{ color: "#fff", textDecoration: "none" }}
+            href="https://storyset.com/communication">
+            Communication illustrations by Storyset
+          </a>
+          <a
+            style={{ color: "#fff", textDecoration: "none" }}
+            href="https://www.freepik.com/free-vector/desktop-computer-vconcept-illustration_32318401.htm#fromView=search&page=1&position=0&uuid=6cebd46b-9ca0-46e8-a224-bad132acafd3">
+            Image by storyset
+          </a>
+        </Stack>
         <Stack spacing={2}>
           <Stack direction="row" alignItems="center" sx={{ pt: 1 }}>
             <MailOutlineIcon sx={{ color: "#fff", fontSize: 30 }} />

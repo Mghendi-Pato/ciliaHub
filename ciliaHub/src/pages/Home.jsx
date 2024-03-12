@@ -56,7 +56,7 @@ const Home = () => {
                 src="Home_image.svg"
                 alt="Home svg"
                 title="Home svg"
-                style={{ width: "150px" }}
+                style={{ width: "200px" }}
               />
             </Stack>
           </Stack>
