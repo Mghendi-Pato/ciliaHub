@@ -41,7 +41,7 @@ function Autotype() {
         color: "#fff",
         fontWeight: "bold",
         fontSize: isSmallScreen ? "1.8em" : "2em",
-        textAlign: isSmallScreen ? "center" : "center",
+        textAlign: isSmallScreen ? "center" : "left",
       }}>
       <span ref={el} />
     </div>

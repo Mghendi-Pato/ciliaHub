@@ -1,13 +1,22 @@
+import React from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const Button1 = (props) => {
-  const { text, width } = props;
+  const { text, scrollToSection, sectionId, width, ...rest } = props;
+
+  const handleClick = () => {
+    if (scrollToSection && sectionId) {
+      scrollToSection(sectionId);
+    }
+  };
+
   return (
     <>
       <Button
+        {...rest}
         variant="contained"
-        {...props}
+        onClick={handleClick}
         sx={{
           textTransform: "none",
           borderRadius: 0,

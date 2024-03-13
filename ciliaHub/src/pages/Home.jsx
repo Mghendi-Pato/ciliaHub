@@ -9,8 +9,15 @@ const Home = () => {
     color: "#fff",
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <>
+    <div id="home">
       <Stack
         direction="column"
         flexGrow={1}
@@ -28,7 +35,7 @@ const Home = () => {
           justifyContent="space-around"
           alignItems={{ xs: "center", md: "flex-start" }}
           sx={{ width: "100%" }}>
-          <Stack sx={{ height: { xs: "120px", md: "auto" } }}>
+          <Stack sx={{ height: { xs: "120px", md: "60px" } }}>
             <Autotype />
           </Stack>
           <Stack>
@@ -48,7 +55,11 @@ const Home = () => {
             justifyContent={{ xs: "center", md: "space-between" }}
             alignItems="center"
             sx={{ width: "100%" }}>
-            <Button text="Contact Us" />
+            <Button
+              text="Contact Us"
+              scrollToSection={scrollToSection}
+              sectionId="contact"
+            />
 
             <Stack sx={{ display: { xs: "none", md: "flex" } }}>
               <img
@@ -61,7 +72,7 @@ const Home = () => {
           </Stack>
         </Stack>
       </Stack>
-    </>
+    </div>
   );
 };
 

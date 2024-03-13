@@ -16,10 +16,10 @@ import PropTypes from "prop-types";
 
 const Navbar = (props) => {
   const pages = [
-    { name: "Home", route: "/" },
-    { name: "About", route: "/about" },
-    { name: "Services", route: "/services" },
-    { name: "Contact", route: "/contact" },
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Services", id: "services" },
+    { name: "Contact", id: "contact" },
   ];
 
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -49,6 +49,13 @@ const Navbar = (props) => {
     children: PropTypes.element.isRequired,
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <CssBaseline />
@@ -67,7 +74,9 @@ const Navbar = (props) => {
                 direction="row"
                 sx={{ display: { xs: "none", md: "flex" } }}>
                 {pages.map((page, index) => (
-                  <IconButton key={index}>
+                  <IconButton
+                    key={index}
+                    onClick={() => scrollToSection(page.id)}>
                     <Button
                       sx={{
                         color: "#fff",

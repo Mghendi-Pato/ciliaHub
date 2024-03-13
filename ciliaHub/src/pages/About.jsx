@@ -3,8 +3,14 @@ import Button from "../components/CustomButton";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 
 const About = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <>
+    <div id="about">
       <Stack
         direction="column"
         alignItems="center"
@@ -98,9 +104,13 @@ const About = () => {
           </li>
         </Stack>
 
-        <Button text="Get In Touch" />
+        <Button
+          text="Get in touch"
+          scrollToSection={scrollToSection}
+          sectionId="contact"
+        />
       </Stack>
-    </>
+    </div>
   );
 };
 

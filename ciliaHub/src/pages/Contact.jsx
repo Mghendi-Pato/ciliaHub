@@ -72,7 +72,7 @@ const Contact = () => {
   });
 
   return (
-    <>
+    <div id="contact">
       <Stack
         flexGrow={1}
         sx={{
@@ -202,7 +202,7 @@ const Contact = () => {
           </form>
         </Stack>
       </Stack>
-    </>
+    </div>
   );
 };
 

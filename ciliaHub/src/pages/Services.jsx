@@ -4,7 +4,7 @@ import services from "../data/services.json";
 
 const Services = () => {
   return (
-    <>
+    <div id="services">
       <Stack
         flexGrow={1}
         sx={{
@@ -54,7 +54,7 @@ const Services = () => {
           ))}
         </Stack>
       </Stack>
-    </>
+    </div>
   );
 };
 
