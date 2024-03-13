@@ -117,6 +117,7 @@ const Navbar = (props) => {
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
+                    mt: 15,
                     width: "100vw",
                     display: { xs: "block", md: "none" },
                   }}>
@@ -126,6 +127,7 @@ const Navbar = (props) => {
                         key={index}
                         onClick={() => {
                           handleCloseNavMenu();
+                          scrollToSection(page.id);
                         }}>
                         {page.icon}
                         <Typography
