@@ -1,6 +1,7 @@
 {
   "name": "ciliahub",
   "private": true,
+  "homepage": "https://ciliahub.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -21,6 +22,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
+    "typed.js": "^2.1.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

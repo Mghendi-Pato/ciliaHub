@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import Button from "../components/CustomButton";
 import Toolbar from "@mui/material/Toolbar";
+import Autotype from "../components/Autotype";
 
 const Home = () => {
   const commonTypographyStyles = {
@@ -27,10 +28,8 @@ const Home = () => {
           justifyContent="space-around"
           alignItems={{ xs: "center", md: "flex-start" }}
           sx={{ width: "100%" }}>
-          <Stack>
-            <Typography variant="h5" sx={{ ...commonTypographyStyles }}>
-              Let’s Design, Let’s Develop
-            </Typography>
+          <Stack sx={{ height: { xs: "120px", md: "auto" } }}>
+            <Autotype />
           </Stack>
           <Stack>
             <Typography
